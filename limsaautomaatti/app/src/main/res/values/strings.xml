@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">limsa-automaatti</string>
+    <string-array name="bottles">
+        <item>PepsiPieni</item>
+        <item>PepsiIso</item>
+        <item>Coca-ColaZeroPieni</item>
+        <item>Coca-ColaZreoIso</item>
+        <item>FantaZeroPieni</item>
+    </string-array>
+</resources>
