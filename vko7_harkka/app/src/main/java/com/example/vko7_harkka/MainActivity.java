@@ -21,6 +21,7 @@ import java.io.OutputStreamWriter;
 public class MainActivity extends Activity {
 
     //TextView text;
+    //testi
     EditText inputText;
     TextView updateText;
     EditText enterUpdates;
