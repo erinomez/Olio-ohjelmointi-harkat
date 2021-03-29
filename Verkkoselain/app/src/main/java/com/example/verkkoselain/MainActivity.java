@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         web.setWebViewClient(new WebViewClient());
         web.getSettings().setJavaScriptEnabled(true);
         web.setWebViewClient(new WebViewClient());
-
     }
 
     TextView.OnEditorActionListener newListener = new TextView.OnEditorActionListener() {
@@ -47,26 +46,18 @@ public class MainActivity extends AppCompatActivity {
                 url = (EditText) findViewById(R.id.urlInput);
                 String newUrl = url.getText().toString();
                 changeUrl(newUrl);
-                //InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                //imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
             }
             return true;
         }
     };
 
     private void changeUrl(String newUrl) {
-        //binding.shoutOutButton.setVisibility(View.GONE);
-        //binding.initializeButton.setVisibility(View.GONE);
         if (newUrl.equals("index.html")) {
             newUrl = urlText;
-            //binding.shoutOutButton.setVisibility(View.VISIBLE);
-            //binding.initializeButton.setVisibility(View.VISIBLE);
         }
         else if (!(newUrl.startsWith("https://") || newUrl.startsWith("http://"))) {
             newUrl = "https://" + newUrl;
         }
-        //history.addToHistory(newUrl);
-        //updateUrl(newUrl);
         web.loadUrl(newUrl);
     }
 
@@ -88,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void shoutOut(View v) {
+        web.loadUrl("");
         web.evaluateJavascript("javascript:shoutOut()", null);
     }
 
