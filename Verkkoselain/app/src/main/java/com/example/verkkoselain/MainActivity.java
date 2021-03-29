@@ -64,18 +64,6 @@ public class MainActivity extends AppCompatActivity {
     public void refreshPage (View v) {
         web.reload();
     }
-/*
-    public void shoutOut (View v) {
-
-        web.setWebViewClient(new WebViewClient() {
-            public void onPageFinished(WebView view, String url) {
-                web.loadUrl("javascript:shoutOut()");
-            }
-        });
-        //web.loadUrl("file///android_asset/index.html");
-        //web.loadUrl("javascript:shoutOut()");
-    } */
-
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void shoutOut(View v) {
